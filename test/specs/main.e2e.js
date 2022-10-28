@@ -36,7 +36,6 @@ describe('Log in to the site with the credentials', () => {
     });
     it('should delete a new job', async () => {
         await DeletePage.deleteJob();
-        await browser.pause(3000);
         const deletedJob = await GridPage.deletedJobInGrid;
         await expect(deletedJob).not.toBeExisting();
     });
